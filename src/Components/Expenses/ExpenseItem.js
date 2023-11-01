@@ -2,7 +2,7 @@ import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
 // import { useState } from "react";
-// import Card from "../UI/Card";
+import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
   
@@ -17,16 +17,16 @@ const ExpenseItem = (props) => {
   // } 
 
   return (
-   <>
-    <div id={props.id} className="expense-item">
+   <li>
+    <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <ExpenseDetails title={props.title} amount={props.amount} />
       {/* <button onClick={changeExpense}>update</button>
       <button onClick={(e) => {deleteEle(props.id, e)}}>Delete</button>
       <div>{props.location}</div> */}
-    </div>
+    </Card>
     {props.msg}
-   </>
+   </li>
   );
 }
 
